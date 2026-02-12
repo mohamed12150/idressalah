@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="meta-title">إدريس صلاح للخدمات والاستشارات اللوجستية | Idres Salah Logistics</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <!-- Modern Professional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#003082',
+                            orange: '#f76702',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+        
+        .nav-sticky {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 48, 130, 0.95) 0%, rgba(0, 48, 130, 0.8) 100%);
+        }
+
+        .orange-line {
+            width: 80px;
+            height: 5px;
+            background-color: #f76702;
+            border-radius: 10px;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-orange {
+            background-color: #f76702;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-orange:hover {
+            background-color: #d65d02;
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(247, 103, 2, 0.3);
+        }
+
+        .btn-outline-blue {
+            border: 2px solid #003082;
+            color: #003082;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-blue:hover {
+            background-color: #003082;
+            color: white;
+        }
+
+        .image-overlay {
+            background: linear-gradient(to top, rgba(0, 48, 130, 0.8), transparent);
+        }
+
+        /* Microinteractions & Motion UI */
+        .btn-magnetic {
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+        }
+        .btn-magnetic:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f76702;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .icon-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .card-inner-motion {
+            transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .card-hover:hover .card-inner-motion {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        .input-focus-motion {
+            transition: all 0.3s ease;
+        }
+        .input-focus-motion:focus {
+            transform: translateX(-5px);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        [dir="ltr"] .input-focus-motion:focus {
+            transform: translateX(5px);
+        }
+
+        [dir="ltr"] body { font-family: 'Inter', 'Cairo', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-5 bg-white border-b border-slate-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-4 group cursor-pointer">
+                <img src="assets/logo.png" alt="Logo" class="h-14 w-auto transition-transform group-hover:scale-110">
+                <div class="hidden md:block">
+                    <h1 class="text-2xl font-black text-brand-blue leading-tight" data-i18n="nav-brand">إدريس صلاح</h1>
+                    <p class="text-[10px] text-brand-orange font-bold tracking-widest uppercase mt-1" data-i18n="nav-sub">للخدمات والاستشارات اللوجستية</p>
+                </div>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-10">
+                <a href="#home" class="nav-link text-sm font-extrabold text-slate-700 hover:text-brand-orange transition" data-i18n="nav-home">الرئيسية</a>
+                <a href="#about" class="nav-link text-sm font-extrabold text-slate-700 hover:text-brand-orange transition" data-i18n="nav-about">من نحن</a>
+                <a href="#services" class="nav-link text-sm font-extrabold text-slate-700 hover:text-brand-orange transition" data-i18n="nav-services">خدماتنا</a>
+                <a href="#contact" class="nav-link text-sm font-extrabold text-slate-700 hover:text-brand-orange transition" data-i18n="nav-contact">اتصل بنا</a>
+            </div>
+
+            <div class="flex items-center gap-5">
+                <button id="lang-switcher" class="btn-magnetic flex items-center gap-2 px-4 py-2 border-2 border-brand-blue rounded-full text-xs font-black text-brand-blue hover:bg-brand-blue hover:text-white transition shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 11.37 9.19 15.383 6 18.15" /></svg>
+                    <span id="lang-text">English</span>
+                </button>
+                <button id="mobile-menu-button" class="lg:hidden p-2 text-brand-blue">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-width="2.5" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t mt-4 px-6 md:px-8 py-6 space-y-4 md:space-y-5 shadow-2xl">
+            <a href="#home" class="block text-base md:text-lg font-bold text-slate-700 hover:text-brand-orange transition" data-i18n="nav-home">الرئيسية</a>
+            <a href="#about" class="block text-base md:text-lg font-bold text-slate-700 hover:text-brand-orange transition" data-i18n="nav-about">من نحن</a>
+            <a href="#services" class="block text-base md:text-lg font-bold text-slate-700 hover:text-brand-orange transition" data-i18n="nav-services">خدماتنا</a>
+            <a href="#contact" class="block text-base md:text-lg font-bold text-brand-orange" data-i18n="nav-contact">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section: Dynamic & Visual -->
+    <section id="home" class="relative min-h-screen flex flex-col justify-between pt-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-white flex-grow flex items-center">
+            <div class="max-w-3xl py-10 md:py-20" data-aos="fade-up">
+                <span class="inline-block px-5 py-2 bg-brand-orange text-white text-[10px] md:text-xs font-black rounded-full mb-6 md:mb-8 uppercase tracking-[0.1em] md:tracking-[0.2em]" data-i18n="hero-badge">السوق السعودي – الرياض | منذ 2019</span>
+                <h2 class="text-3xl md:text-5xl lg:text-7xl font-black leading-[1.3] mb-6 md:mb-8" data-i18n="hero-title">
+                    إدريس صلاح <br><span class="text-brand-orange">للخدمات والاستشارات</span> اللوجستية
+                </h2>
+                <div class="orange-line mb-6 md:mb-8"></div>
+                <p class="text-lg md:text-xl lg:text-2xl text-slate-100 mb-8 md:mb-12 leading-relaxed font-light" data-i18n="hero-desc">
+                    نحن لا نقدم مجرد استشارات، نحن نصمم البنية التحتية لنجاحكم اللوجستي في المملكة العربية السعودية. خبرة تتجاوز 11 عاماً بين أيديكم.
+                </p>
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6">
+                    <a href="#services" class="btn-orange btn-magnetic px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-xs md:text-sm shadow-2xl text-center" data-i18n="hero-cta-1">استعرض خدماتنا</a>
+                    <a href="#contact" class="btn-magnetic bg-white/10 backdrop-blur-md border-2 border-white/30 px-8 md:px-10 py-4 md:py-5 rounded-2xl font-black text-xs md:text-sm hover:bg-white hover:text-brand-blue transition shadow-xl text-center" data-i18n="hero-cta-2">طلب استشارة مجانية</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section: Integrated Flow -->
+        <div class="relative z-10 w-full pb-12">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-[2.5rem]">
+                    <div class="text-center md:border-l border-white/10 group pb-6 md:pb-0 border-b md:border-b-0 border-white/10 last:border-0 last:pb-0">
+                        <span class="text-4xl font-black text-brand-orange block mb-2 transition-transform group-hover:scale-125 group-hover:rotate-6">11+</span>
+                        <span class="text-xs font-bold text-slate-300 uppercase tracking-widest" data-i18n="stat-1">عاماً من الخبرة</span>
+                    </div>
+                    <div class="text-center md:border-l border-white/10 group py-6 md:py-0 border-b md:border-b-0 border-white/10">
+                        <span class="text-4xl font-black text-brand-orange block mb-2 transition-transform group-hover:scale-125 group-hover:-rotate-6">500+</span>
+                        <span class="text-xs font-bold text-slate-300 uppercase tracking-widest" data-i18n="stat-2">شريك نجاح</span>
+                    </div>
+                    <div class="text-center group pt-6 md:pt-0">
+                        <span class="text-4xl font-black text-brand-orange block mb-2 transition-transform group-hover:scale-125 group-hover:rotate-6">2019</span>
+                        <span class="text-xs font-bold text-slate-300 uppercase tracking-widest" data-i18n="stat-3">سنة التأسيس</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: Professional & Visual -->
+    <section id="about" class="py-20 md:py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80" alt="Logistics Consulting" class="w-full h-auto">
+                        <div class="absolute inset-0 image-overlay"></div>
+                        <div class="absolute bottom-6 right-6 md:bottom-10 md:right-10 text-white">
+                            <p class="text-2xl md:text-4xl font-black mb-1 md:mb-2" data-i18n="about-img-text">نحن نبني المستقبل</p>
+                            <p class="text-[10px] md:text-xs text-brand-orange font-bold uppercase tracking-widest">Idres Salah Logistics</p>
+                        </div>
+                    </div>
+                    <div class="absolute -top-10 -left-10 w-48 md:w-64 h-48 md:h-64 bg-brand-orange/10 rounded-full blur-3xl -z-0"></div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <span class="text-brand-orange font-black text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block" data-i18n="about-badge">نبذة عن الشركة | About Us</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-brand-blue mb-6 md:mb-8 leading-tight" data-i18n="about-title">خبرة عميقة في قلب القطاع اللوجستي السعودي</h2>
+                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8 md:mb-10" data-i18n="about-desc">
+                        إدريس صلاح للخدمات والاستشارات اللوجستية هي جهة متخصصة في تقديم الحلول التشغيلية والاستشارية في قطاع الخدمات اللوجستية داخل المملكة العربية السعودية، بخبرة تتجاوز 11 عامًا في تأسيس وإدارة وتشغيل مشاريع النقل والتوصيل. نساعد المستثمرين والشركات الناشئة على دخول السوق السعودي من خلال تأسيس مشاريع متكاملة تشمل التخطيط، التراخيص، التشغيل، وبناء الشراكات الاستراتيجية.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+                        <div class="flex items-center gap-4 md:gap-5 group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-blue rounded-xl md:rounded-2xl flex items-center justify-center text-white shadow-lg transition-transform group-hover:rotate-12 group-hover:scale-110">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2.5"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-brand-blue text-base md:text-lg" data-i18n="val-1">الاحترافية</h4>
+                                <p class="text-[8px] md:text-xs text-slate-400 font-bold uppercase tracking-widest">Professionalism</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 md:gap-5 group">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-brand-orange rounded-xl md:rounded-2xl flex items-center justify-center text-white shadow-lg transition-transform group-hover:-rotate-12 group-hover:scale-110">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2.5"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-brand-blue text-base md:text-lg" data-i18n="val-2">الموثوقية</h4>
+                                <p class="text-[8px] md:text-xs text-slate-400 font-bold uppercase tracking-widest">Reliability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section: Visual Cards -->
+    <section id="services" class="py-20 md:py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-20" data-aos="fade-up">
+                <span class="text-brand-orange font-black text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block" data-i18n="serv-badge">خدماتنا | Our Services</span>
+                <h2 class="text-3xl md:text-4xl lg:text-6xl font-black text-brand-blue mb-6 md:mb-8" data-i18n="serv-title">حلول لوجستية <span class="text-brand-orange">ذكية</span></h2>
+                <p class="text-lg md:text-xl text-slate-500 font-light leading-relaxed" data-i18n="serv-subtitle">نحن نرافقكم من الفكرة الأولى حتى التشغيل الكامل للمشروع، مع ضمان الالتزام بكافة المعايير السعودية.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
+                <!-- Service 1: Food Delivery -->
+                <div class="card-hover bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden group" data-aos="fade-up">
+                    <div class="h-60 md:h-72 relative overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="assets/1.jpg" alt="Food Delivery" class="w-full h-full object-cover card-inner-motion">
+                        <div class="absolute top-6 right-6 md:top-8 md:right-8">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-orange text-white rounded-xl md:rounded-2xl flex items-center justify-center shadow-2xl icon-float">
+                                <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-width="2"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-12">
+                        <h3 class="text-2xl md:text-3xl font-black text-brand-blue mb-4 md:mb-6" data-i18n="serv-1-title">خدمات تطبيقات توصيل الطعام</h3>
+                        <ul class="space-y-4 md:space-y-5 mb-8 md:mb-10">
+                            <li class="flex items-start gap-3 md:gap-4 group/item">
+                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mt-1 transition-transform group-hover/item:scale-125">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                </div>
+                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-orange" data-i18n="serv-1-item-1">إعداد دراسة جدوى متكاملة</span>
+                            </li>
+                            <li class="flex items-start gap-3 md:gap-4 group/item">
+                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mt-1 transition-transform group-hover/item:scale-125">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                </div>
+                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-orange" data-i18n="serv-1-item-2">استخراج التراخيص والسجل التجاري</span>
+                            </li>
+                            <li class="flex items-start gap-3 md:gap-4 group/item">
+                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mt-1 transition-transform group-hover/item:scale-125">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                </div>
+                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-orange" data-i18n="serv-1-item-3">توقيع عقود مع جميع تطبيقات السوق</span>
+                            </li>
+                        </ul>
+                        <div class="pt-6 md:pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <span class="text-[10px] md:text-sm font-black text-slate-400 uppercase tracking-widest" data-i18n="serv-duration">مدة التنفيذ: 90 - 120 يوم</span>
+                            <a href="#contact" class="text-brand-orange font-black flex items-center gap-3 group-hover:gap-5 transition-all text-sm md:text-base" data-i18n="serv-cta">طلب الخدمة ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Intercity Transport -->
+                <div class="card-hover bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-60 md:h-72 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80" alt="Intercity Transport" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 card-inner-motion">
+                        <div class="absolute inset-0 bg-brand-orange/40 mix-blend-multiply"></div>
+                        <div class="absolute top-6 right-6 md:top-8 md:right-8">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-blue text-white rounded-xl md:rounded-2xl flex items-center justify-center shadow-2xl icon-float">
+                                <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" stroke-width="2"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1-1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1m-6 0a1 1 0 001-1" stroke-width="2"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8 md:p-12">
+                        <h3 class="text-2xl md:text-3xl font-black text-brand-blue mb-4 md:mb-6" data-i18n="serv-2-title">خدمات النقل بين المدن</h3>
+                        <ul class="space-y-4 md:space-y-5 mb-8 md:mb-10">
+                            <li class="flex items-start gap-3 md:gap-4 group/item">
+                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue shrink-0 mt-1 transition-transform group-hover/item:scale-125">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                </div>
+                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-blue" data-i18n="serv-2-item-1">شرح تفصيلي لآلية التشغيل</span>
+                            </li>
+                            <li class="flex items-start gap-3 md:gap-4 group/item">
+                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue shrink-0 mt-1 transition-transform group-hover/item:scale-125">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                </div>
+                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-blue" data-i18n="serv-2-item-2">توقيع عقود مع مصانع وشركات كبرى</span>
+                            </li>
+                            <li class="flex items-start gap-3 md:gap-4 group/item">
+                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue shrink-0 mt-1 transition-transform group-hover/item:scale-125">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                </div>
+                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-blue" data-i18n="serv-2-item-3">إنهاء جميع التراخيص الحكومية</span>
+                            </li>
+                        </ul>
+                        <div class="pt-6 md:pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                            <span class="text-[10px] md:text-sm font-black text-slate-400 uppercase tracking-widest" data-i18n="serv-duration">مدة التنفيذ: 90 - 120 يوم</span>
+                            <a href="#contact" class="text-brand-orange font-black flex items-center gap-3 group-hover:gap-5 transition-all text-sm md:text-base" data-i18n="serv-cta">طلب الخدمة ←</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us: Impactful & Professional -->
+    <section class="py-20 md:py-32 bg-brand-blue text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&q=80" class="w-full h-full object-cover opacity-10 grayscale">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 md:mb-24" data-aos="fade-up">
+                <span class="text-brand-orange font-black text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] mb-4 md:mb-6 block" data-i18n="why-badge">لماذا نحن؟ | Why Idres Salah</span>
+                <h2 class="text-3xl md:text-4xl lg:text-6xl font-black mb-6 md:mb-8" data-i18n="why-title">القيمة المضافة التي نقدمها لأعمالكم</h2>
+                <div class="orange-line mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+                <div class="p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition duration-500 group" data-aos="fade-up">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-orange rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-2xl transition-transform group-hover:rotate-[360deg] duration-700">
+                        <svg class="w-6 h-6 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2.5"/></svg>
+                    </div>
+                    <h4 class="text-xl md:text-2xl font-black mb-4 md:mb-6" data-i18n="why-item-1">تأسيس احترافي من الصفر</h4>
+                    <p class="text-slate-300 leading-relaxed text-base md:text-lg" data-i18n="why-desc-1">نحن نبني مشروعك من القواعد، نضمن لك بداية قوية ومستقرة تتوافق مع كافة المعايير القانونية والتشغيلية في المملكة.</p>
+                </div>
+                <div class="p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition duration-500 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-orange rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-2xl transition-transform group-hover:scale-125">
+                        <svg class="w-6 h-6 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2.5"/></svg>
+                    </div>
+                    <h4 class="text-xl md:text-2xl font-black mb-4 md:mb-6" data-i18n="why-item-2">تعظيم الأرباح والنمو</h4>
+                    <p class="text-slate-300 leading-relaxed text-base md:text-lg" data-i18n="why-desc-2">خبرتنا تتيح لنا تحديد مكامن الهدر التشغيلي وتحويلها إلى نقاط ربحية، مما يسرع من استرداد رأس المال واستدامة المشروع.</p>
+                </div>
+                <div class="p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition duration-500 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-orange rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 shadow-2xl transition-transform group-hover:translate-x-3">
+                        <svg class="w-6 h-6 md:w-10 md:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-width="2.5"/></svg>
+                    </div>
+                    <h4 class="text-xl md:text-2xl font-black mb-4 md:mb-6" data-i18n="why-item-3">شبكة علاقات استراتيجية</h4>
+                    <p class="text-slate-300 leading-relaxed text-base md:text-lg" data-i18n="why-desc-3">نفتح لك الأبواب المغلقة عبر علاقاتنا القوية مع صناع القرار في التطبيقات اللوجستية والجهات الحكومية والمصانع.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: Clean & Focused -->
+    <section id="contact" class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
+                <div data-aos="fade-right">
+                    <span class="text-brand-orange font-black text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] mb-4 md:mb-6 block" data-i18n="cont-badge">تواصل معنا | Contact</span>
+                    <h2 class="text-3xl md:text-4xl lg:text-6xl font-black text-brand-blue mb-6 md:mb-10 leading-tight" data-i18n="cont-title">دعنا نبدأ رحلة النجاح معاً</h2>
+                    <p class="text-lg md:text-xl text-slate-600 leading-relaxed mb-8 md:mb-12 font-light" data-i18n="cont-desc">نحن هنا للإجابة على كافة تساؤلاتكم وتقديم الحلول التي تناسب تطلعاتكم الاستثمارية.</p>
+                    
+                    <div class="space-y-6 md:space-y-10">
+                        <div class="flex items-center gap-4 md:gap-6 group">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-slate-50 rounded-2xl md:rounded-3xl flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all duration-500 shadow-sm shrink-0">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1" data-i18n="cont-phone">الهاتف</p>
+                                <p class="text-lg md:text-2xl font-black text-brand-blue" dir="ltr">00966534447323</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 md:gap-6 group">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-slate-50 rounded-2xl md:rounded-3xl flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all duration-500 shadow-sm shrink-0">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1" data-i18n="cont-email">البريد الإلكتروني</p>
+                                <p class="text-lg md:text-2xl font-black text-brand-blue break-all">idressalah155@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 md:gap-6 group">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-slate-50 rounded-2xl md:rounded-3xl flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all duration-500 shadow-sm shrink-0">
+                                <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="2"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2"/></svg>
+                            </div>
+                            <div>
+                                <p class="text-[8px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1" data-i18n="cont-loc">الموقع</p>
+                                <p class="text-lg md:text-2xl font-black text-brand-blue" data-i18n="cont-loc-val">الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-2 border-brand-orange/5 shadow-inner" data-aos="fade-left">
+                    <form id="contact-form" action="https://formsubmit.co/idressalah155@gmail.com" method="POST" class="space-y-6 md:space-y-8">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="طلب خدمة جديد من الموقع">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://localhost:8000/#contact">
+                        
+                        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                            <div class="space-y-2 md:space-y-3">
+                                <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-name">الاسم</label>
+                                <input type="text" name="name" id="form-name-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base" required>
+                            </div>
+                            <div class="space-y-2 md:space-y-3">
+                                <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-phone">رقم الجوال</label>
+                                <input type="tel" name="phone" id="form-phone-input" placeholder="05xxxxxxxx" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base" required>
+                            </div>
+                        </div>
+                        <div class="space-y-2 md:space-y-3">
+                            <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-service">نوع الخدمة المطلوبة</label>
+                            <select name="service" id="form-service-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition appearance-none bg-white font-bold text-sm md:text-base">
+                                <option data-i18n="opt-1">تطبيقات توصيل الطعام</option>
+                                <option data-i18n="opt-2">النقل بين المدن</option>
+                                <option data-i18n="opt-3">استشارات عامة</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2 md:space-y-3">
+                            <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-msg">تفاصيل إضافية</label>
+                            <textarea rows="4" name="message" id="form-msg-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base"></textarea>
+                        </div>
+                        <button type="submit" class="btn-orange btn-magnetic w-full py-4 md:py-6 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-2xl" data-i18n="form-btn">إرسال الطلب الآن</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: Premium Corporate -->
+    <footer class="py-12 md:py-20 bg-slate-900 text-white border-t-8 border-brand-orange">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 mb-12 md:mb-16">
+                <div class="flex items-center gap-4 md:gap-6">
+                    <img src="assets/logo.png" alt="Logo" class="h-12 md:h-16 w-auto bg-white rounded-lg p-1">
+                    <div>
+                        <h4 class="font-black text-xl md:text-2xl leading-tight" data-i18n="nav-brand">إدريس صلاح</h4>
+                        <p class="text-[8px] md:text-[10px] text-brand-orange font-bold uppercase tracking-[0.2em] md:tracking-[0.3em]" data-i18n="nav-sub">للخدمات والاستشارات اللوجستية</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-[10px] md:text-xs font-black uppercase tracking-widest text-slate-400">
+                    <a href="#home" class="hover:text-brand-orange transition" data-i18n="nav-home">الرئيسية</a>
+                    <a href="#about" class="hover:text-brand-orange transition" data-i18n="nav-about">من نحن</a>
+                    <a href="#services" class="hover:text-brand-orange transition" data-i18n="nav-services">خدماتنا</a>
+                    <a href="#contact" class="hover:text-brand-orange transition" data-i18n="nav-contact">اتصل بنا</a>
+                </div>
+            </div>
+            <div class="pt-8 md:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] md:text-xs text-slate-500 font-bold text-center md:text-right" data-i18n="footer-copy">© 2026 إدريس صلاح. جميع الحقوق محفوظة. صمم بكل حب في المملكة.</p>
+                <div class="flex gap-5 md:gap-6">
+                    <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-orange transition"><svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+                    <a href="#" class="w-8 h-8 md:w-10 md:h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-brand-orange transition"><svg class="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            ar: {
+                "nav-brand": "إدريس صلاح",
+                "nav-sub": "للخدمات والاستشارات اللوجستية",
+                "nav-home": "الرئيسية",
+                "nav-about": "من نحن",
+                "nav-services": "خدماتنا",
+                "nav-contact": "اتصل بنا",
+                "hero-badge": "السوق السعودي – الرياض | منذ 2019",
+                "hero-title": "إدريس صلاح <br><span class='text-brand-orange'>للخدمات والاستشارات</span> اللوجستية",
+                "hero-desc": "نحن لا نقدم مجرد استشارات، نحن نصمم البنية التحتية لنجاحكم اللوجستي في المملكة العربية السعودية. خبرة تتجاوز 11 عاماً بين أيديكم.",
+                "hero-cta-1": "استعرض خدماتنا",
+                "hero-cta-2": "طلب استشارة مجانية",
+                "stat-1": "عاماً من الخبرة",
+                "stat-2": "شريك نجاح",
+                "stat-3": "سنة التأسيس",
+                "about-badge": "نبذة عن الشركة | About Us",
+                "about-title": "خبرة عميقة في قلب القطاع اللوجستي السعودي",
+                "about-desc": "إدريس صلاح للخدمات والاستشارات اللوجستية هي جهة متخصصة في تقديم الحلول التشغيلية والاستشارية في قطاع الخدمات اللوجستية داخل المملكة العربية السعودية، بخبرة تتجاوز 11 عامًا في تأسيس وإدارة وتشغيل مشاريع النقل والتوصيل. نساعد المستثمرين والشركات الناشئة على دخول السوق السعودي من خلال تأسيس مشاريع متكاملة تشمل التخطيط، التراخيص، التشغيل، وبناء الشراكات الاستراتيجية.",
+                "about-img-text": "نحن نبني المستقبل",
+                "val-1": "الاحترافية",
+                "val-2": "الموثوقية",
+                "serv-badge": "خدماتنا | Our Services",
+                "serv-title": "حلول لوجستية <span class='text-brand-orange'>ذكية</span>",
+                "serv-subtitle": "نحن نرافقكم من الفكرة الأولى حتى التشغيل الكامل للمشروع، مع ضمان الالتزام بكافة المعايير السعودية.",
+                "serv-1-title": "خدمات تطبيقات توصيل الطعام",
+                "serv-1-item-1": "إعداد دراسة جدوى متكاملة",
+                "serv-1-item-2": "استخراج التراخيص والسجل التجاري",
+                "serv-1-item-3": "توقيع عقود مع جميع تطبيقات السوق",
+                "serv-2-title": "خدمات النقل بين المدن",
+                "serv-2-item-1": "شرح تفصيلي لآلية التشغيل",
+                "serv-2-item-2": "توقيع عقود مع مصانع وشركات كبرى",
+                "serv-2-item-3": "إنهاء جميع التراخيص الحكومية",
+                "serv-duration": "مدة التنفيذ: 90 - 120 يوم",
+                "serv-cta": "طلب الخدمة ←",
+                "why-badge": "لماذا نحن؟ | Why Idres Salah",
+                "why-title": "القيمة المضافة التي نقدمها لأعمالكم",
+                "why-item-1": "تأسيس احترافي من الصفر",
+                "why-desc-1": "نحن نبني مشروعك من القواعد، نضمن لك بداية قوية ومستقرة تتوافق مع كافة المعايير القانونية والتشغيلية في المملكة.",
+                "why-item-2": "تعظيم الأرباح والنمو",
+                "why-desc-2": "خبرتنا تتيح لنا تحديد مكامن الهدر التشغيلي وتحويلها إلى نقاط ربحية، مما يسرع من استرداد رأس المال واستدامة المشروع.",
+                "why-item-3": "شبكة علاقات استراتيجية",
+                "why-desc-3": "نفتح لك الأبواب المغلقة عبر علاقاتنا القوية مع صناع القرار في التطبيقات اللوجستية والجهات الحكومية والمصانع.",
+                "cont-badge": "تواصل معنا | Contact",
+                "cont-title": "دعنا نبدأ رحلة النجاح معاً",
+                "cont-desc": "نحن هنا للإجابة على كافة تساؤلاتكم وتقديم الحلول التي تناسب تطلعاتكم الاستثمارية.",
+                "cont-phone": "الهاتف",
+                "cont-email": "البريد الإلكتروني",
+                "cont-loc": "الموقع",
+                "cont-loc-val": "الرياض، المملكة العربية السعودية",
+                "form-name": "الاسم",
+                "form-phone": "رقم الجوال",
+                "form-service": "نوع الخدمة المطلوبة",
+                "form-msg": "تفاصيل إضافية",
+                "form-btn": "إرسال الطلب الآن",
+                "opt-1": "تطبيقات توصيل الطعام",
+                "opt-2": "النقل بين المدن",
+                "opt-3": "استشارات عامة",
+                "footer-copy": "© 2026 إدريس صلاح. جميع الحقوق محفوظة. صمم بكل حب في المملكة.",
+                "form-name-ph": "اسمك الكريم",
+                "form-msg-ph": "كيف يمكننا مساعدتك؟"
+            },
+            en: {
+                "nav-brand": "Idres Salah",
+                "nav-sub": "Logistics Services & Consulting",
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-services": "Services",
+                "nav-contact": "Contact",
+                "hero-badge": "Saudi Market – Riyadh | Since 2019",
+                "hero-title": "Idres Salah <br><span class='text-brand-orange'>Logistics Services</span> & Consulting",
+                "hero-desc": "We don't just provide consulting; we design the infrastructure for your logistics success in Saudi Arabia. Over 11 years of experience at your service.",
+                "hero-cta-1": "Our Services",
+                "hero-cta-2": "Free Consultation",
+                "stat-1": "Years of Experience",
+                "stat-2": "Success Partners",
+                "stat-3": "Established Year",
+                "about-badge": "About Us",
+                "about-title": "Deep Experience in Saudi Logistics",
+                "about-desc": "Idres Salah Logistics Services & Consulting is a specialized firm providing end-to-end logistics consulting and execution solutions in Saudi Arabia. With over 11 years of experience in establishing, managing, and operating transport and delivery projects, we help investors and startups enter the Saudi market through full project setup, including planning, licensing, operations, and strategic partnerships.",
+                "about-img-text": "Building the Future",
+                "val-1": "Professionalism",
+                "val-2": "Reliability",
+                "serv-badge": "Our Services",
+                "serv-title": "Smart <span class='text-brand-orange'>Logistics</span> Solutions",
+                "serv-subtitle": "We accompany you from the first idea to the full operation of the project, ensuring compliance with all Saudi standards.",
+                "serv-1-title": "Food Delivery App Services",
+                "serv-1-item-1": "Comprehensive feasibility study",
+                "serv-1-item-2": "Licensing and commercial registration",
+                "serv-1-item-3": "Contracts with all market applications",
+                "serv-2-title": "Intercity Transport Services",
+                "serv-2-item-1": "Detailed operational mechanism",
+                "serv-2-item-2": "Contracts with factories and major firms",
+                "serv-2-item-3": "Government licensing completion",
+                "serv-duration": "Execution: 90 - 120 Days",
+                "serv-cta": "Request Service ←",
+                "why-badge": "Why Idres Salah?",
+                "why-title": "Value Added to Your Business",
+                "why-item-1": "Professional Setup",
+                "why-desc-1": "We build your project from the ground up, ensuring a strong and stable start that complies with all legal and operational standards.",
+                "why-item-2": "Maximize Profits",
+                "why-desc-2": "Our experience allows us to identify operational waste and turn it into profit points, accelerating ROI and sustainability.",
+                "why-item-3": "Strategic Network",
+                "why-desc-3": "We open closed doors through our strong relationships with decision-makers in logistics apps, government, and factories.",
+                "cont-badge": "Contact Us",
+                "cont-title": "Let's Start Success Together",
+                "cont-desc": "We are here to answer all your questions and provide solutions that suit your investment aspirations.",
+                "cont-phone": "Phone",
+                "cont-email": "Email",
+                "cont-loc": "Location",
+                "cont-loc-val": "Riyadh, Saudi Arabia",
+                "form-name": "Name",
+                "form-phone": "Phone",
+                "form-service": "Service Type",
+                "form-msg": "Additional Details",
+                "form-btn": "Send Request Now",
+                "opt-1": "Food Delivery Apps",
+                "opt-2": "Intercity Transport",
+                "opt-3": "General Consulting",
+                "footer-copy": "© 2026 Idres Salah. All Rights Reserved. Designed with love in KSA.",
+                "form-name-ph": "Your Name",
+                "form-msg-ph": "How can we help you?"
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLang() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.getElementById('lang-text').innerText = currentLang === 'ar' ? 'English' : 'العربية';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) el.innerHTML = translations[currentLang][key];
+            });
+            
+            document.getElementById('form-name-input').placeholder = translations[currentLang]['form-name-ph'];
+            document.getElementById('form-msg-input').placeholder = translations[currentLang]['form-msg-ph'];
+            
+            AOS.refresh();
+        }
+
+        document.getElementById('lang-switcher').addEventListener('click', toggleLang);
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('nav-sticky');
+            else nav.classList.remove('nav-sticky');
+        });
+
+        const menuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        AOS.init({ once: true, offset: 100, duration: 800 });
+
+        document.getElementById('form-name-input').placeholder = translations['ar']['form-name-ph'];
+        document.getElementById('form-msg-input').placeholder = translations['ar']['form-msg-ph'];
+
+        // Lottie Animation Initialization
+        // lottie.loadAnimation({
+        //     container: document.getElementById('lottie-delivery'),
+        //     renderer: 'svg',
+        //     loop: true,
+        //     autoplay: true,
+        //     path: 'assets/animation/delivery.json'
+        // });
+    </script>
+</body>
+</html>
