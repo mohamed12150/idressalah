@@ -290,82 +290,158 @@
                 <p class="text-lg md:text-xl text-slate-500 font-light leading-relaxed" data-i18n="serv-subtitle">نحن نرافقكم من الفكرة الأولى حتى التشغيل الكامل للمشروع، مع ضمان الالتزام بكافة المعايير السعودية.</p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
-                <!-- Service 1: Food Delivery -->
-                <div class="card-hover bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden group" data-aos="fade-up">
-                    <div class="h-60 md:h-72 relative overflow-hidden bg-slate-100 flex items-center justify-center">
-                        <img src="assets/1.jpg" alt="Food Delivery" class="w-full h-full object-cover card-inner-motion">
-                        <div class="absolute top-6 right-6 md:top-8 md:right-8">
-                            <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-orange text-white rounded-xl md:rounded-2xl flex items-center justify-center shadow-2xl icon-float">
-                                <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-width="2"/></svg>
+            <div class="flex flex-col gap-20">
+                <!-- Service 1: Food Delivery (Image Left - Content Right) -->
+                <div class="bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group" data-aos="fade-up">
+                    <div class="grid lg:grid-cols-2">
+                        <div class="relative overflow-hidden min-h-[300px] lg:min-h-full">
+                            <img src="assets/1.jpg" alt="Food Delivery" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:bg-gradient-to-l"></div>
+                            <div class="absolute top-6 right-6 md:top-10 md:right-10 z-10">
+                                <div class="w-14 h-14 md:w-20 md:h-20 bg-brand-orange text-white rounded-2xl flex items-center justify-center shadow-2xl icon-float">
+                                    <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-width="2"/></svg>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-8 md:p-12">
-                        <h3 class="text-2xl md:text-3xl font-black text-brand-blue mb-4 md:mb-6" data-i18n="serv-1-title">خدمات تطبيقات توصيل الطعام</h3>
-                        <ul class="space-y-4 md:space-y-5 mb-8 md:mb-10">
-                            <li class="flex items-start gap-3 md:gap-4 group/item">
-                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mt-1 transition-transform group-hover/item:scale-125">
-                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        <div class="p-8 md:p-12 lg:p-16">
+                            <span class="text-brand-orange font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mb-4 block">Service 01</span>
+                            <h3 class="text-2xl md:text-4xl font-black text-brand-blue mb-6" data-i18n="serv-1-title">خدمات تطبيق توصيل الطعام</h3>
+                            <p class="text-slate-500 text-lg mb-8 leading-relaxed" data-i18n="serv-1-desc">
+                                نقدم حلولًا متكاملة لتأسيس وتشغيل تطبيقات توصيل الطعام وفق خطوات مدروسة لضمان نجاح المشروع واستدامته.
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-x-8 gap-y-8">
+                                <!-- Step 1 -->
+                                <div class="group/item">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="w-8 h-8 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange font-bold text-sm shrink-0 transition-transform group-hover/item:scale-110">1</div>
+                                        <h4 class="font-bold text-brand-blue" data-i18n="serv-1-step-1">دراسة الجدوى</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-500 leading-relaxed pr-11" data-i18n="serv-1-step-1-desc">إعداد دراسة جدوى شاملة لتقييم الفرص وتحليل السوق والتكاليف.</p>
                                 </div>
-                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-orange" data-i18n="serv-1-item-1">إعداد دراسة جدوى متكاملة</span>
-                            </li>
-                            <li class="flex items-start gap-3 md:gap-4 group/item">
-                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mt-1 transition-transform group-hover/item:scale-125">
-                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                <!-- Step 2 -->
+                                <div class="group/item">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="w-8 h-8 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange font-bold text-sm shrink-0 transition-transform group-hover/item:scale-110">2</div>
+                                        <h4 class="font-bold text-brand-blue" data-i18n="serv-1-step-2">الترخيص والتسجيل</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-500 leading-relaxed pr-11" data-i18n="serv-1-step-2-desc">إجراءات الترخيص والتسجيل التجاري وفق الأنظمة واللوائح المعتمدة.</p>
                                 </div>
-                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-orange" data-i18n="serv-1-item-2">استخراج التراخيص والسجل التجاري</span>
-                            </li>
-                            <li class="flex items-start gap-3 md:gap-4 group/item">
-                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mt-1 transition-transform group-hover/item:scale-125">
-                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                                <!-- Step 3 -->
+                                <div class="group/item">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="w-8 h-8 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange font-bold text-sm shrink-0 transition-transform group-hover/item:scale-110">3</div>
+                                        <h4 class="font-bold text-brand-blue" data-i18n="serv-1-step-3">إدارة العقود</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-500 leading-relaxed pr-11" data-i18n="serv-1-step-3-desc">إبرام العقود مع التطبيقات والشركاء لضمان انطلاقة قوية.</p>
                                 </div>
-                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-orange" data-i18n="serv-1-item-3">توقيع عقود مع جميع تطبيقات السوق</span>
-                            </li>
-                        </ul>
-                        <div class="pt-6 md:pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
-                            <span class="text-[10px] md:text-sm font-black text-slate-400 uppercase tracking-widest" data-i18n="serv-duration">مدة التنفيذ: 90 - 120 يوم</span>
-                            <a href="#contact" class="text-brand-orange font-black flex items-center gap-3 group-hover:gap-5 transition-all text-sm md:text-base" data-i18n="serv-cta">طلب الخدمة ←</a>
+                                <!-- Step 4 -->
+                                <div class="group/item">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="w-8 h-8 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange font-bold text-sm shrink-0 transition-transform group-hover/item:scale-110">4</div>
+                                        <h4 class="font-bold text-brand-blue" data-i18n="serv-1-step-4">التنفيذ (90-120 يوم)</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-500 leading-relaxed pr-11" data-i18n="serv-1-step-4-desc">تنفيذ المشروع وفق جدول زمني محدد ومتابعة دقيقة.</p>
+                                </div>
+                                <!-- Step 5 -->
+                                <div class="group/item">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="w-8 h-8 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange font-bold text-sm shrink-0 transition-transform group-hover/item:scale-110">5</div>
+                                        <h4 class="font-bold text-brand-blue" data-i18n="serv-1-step-5">توفير الكوادر</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-500 leading-relaxed pr-11" data-i18n="serv-1-step-5-desc">توفير سائقين مؤهلين وتدريبهم على أعلى معايير الجودة.</p>
+                                </div>
+                                <!-- Step 6 -->
+                                <div class="group/item">
+                                    <div class="flex items-center gap-3 mb-2">
+                                        <div class="w-8 h-8 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange font-bold text-sm shrink-0 transition-transform group-hover/item:scale-110">6</div>
+                                        <h4 class="font-bold text-brand-blue" data-i18n="serv-1-step-6">إدارة الأسطول</h4>
+                                    </div>
+                                    <p class="text-sm text-slate-500 leading-relaxed pr-11" data-i18n="serv-1-step-6-desc">تشغيل الأسطول ومراقبة الأداء لضمان كفاءة العمليات.</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-10 pt-8 border-t border-slate-100 flex flex-wrap gap-6 items-center justify-between">
+                                <a href="#contact" class="btn-orange btn-magnetic px-8 py-4 rounded-xl font-bold text-sm shadow-lg">احصل على عرض سعر</a>
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">مدة التنفيذ: 90 - 120 يوم</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Service 2: Intercity Transport -->
-                <div class="card-hover bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-60 md:h-72 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80" alt="Intercity Transport" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 card-inner-motion">
-                        <div class="absolute inset-0 bg-brand-orange/40 mix-blend-multiply"></div>
-                        <div class="absolute top-6 right-6 md:top-8 md:right-8">
-                            <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-blue text-white rounded-xl md:rounded-2xl flex items-center justify-center shadow-2xl icon-float">
-                                <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" stroke-width="2"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1-1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1m-6 0a1 1 0 001-1" stroke-width="2"/></svg>
+                <!-- Service 2: Intercity Transport (Content Left - Image Right) -->
+                <div class="bg-white rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group" data-aos="fade-up">
+                    <div class="grid lg:grid-cols-2">
+                         <div class="p-8 md:p-12 lg:p-16 order-2 lg:order-1">
+                            <span class="text-brand-blue font-black text-[10px] md:text-xs uppercase tracking-[0.2em] mb-4 block">Service 02</span>
+                            <h3 class="text-2xl md:text-4xl font-black text-brand-blue mb-6" data-i18n="serv-2-title">خطة تنفيذ خدمات النقل بين المدن</h3>
+                            
+                            <div class="space-y-8 mt-8">
+                                <!-- Phase 1 -->
+                                <div class="flex gap-4 group/item">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold shadow-lg shrink-0 z-10 group-hover/item:scale-110 transition-transform">1</div>
+                                        <div class="w-0.5 h-full bg-slate-100 -my-2"></div>
+                                    </div>
+                                    <div class="pb-8">
+                                        <h4 class="text-lg font-bold text-brand-blue mb-2" data-i18n="serv-2-phase-1">إعداد آلية التشغيل</h4>
+                                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="serv-2-phase-1-desc">
+                                            تصور شامل لنموذج العمل، الإجراءات القياسية، هيكلة العمليات، ونظام إدارة الأسطول.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Phase 2 -->
+                                <div class="flex gap-4 group/item">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 bg-white border-2 border-brand-blue text-brand-blue rounded-full flex items-center justify-center font-bold shrink-0 z-10 group-hover/item:bg-brand-blue group-hover/item:text-white transition-colors">2</div>
+                                        <div class="w-0.5 h-full bg-slate-100 -my-2"></div>
+                                    </div>
+                                    <div class="pb-8">
+                                        <h4 class="text-lg font-bold text-brand-blue mb-2" data-i18n="serv-2-phase-2">التراخيص والمتطلبات</h4>
+                                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="serv-2-phase-2-desc">
+                                            استخراج التراخيص الحكومية وتصاريح النقل وضمان الامتثال للأنظمة.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Phase 3 -->
+                                <div class="flex gap-4 group/item">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 bg-white border-2 border-brand-blue text-brand-blue rounded-full flex items-center justify-center font-bold shrink-0 z-10 group-hover/item:bg-brand-blue group-hover/item:text-white transition-colors">3</div>
+                                        <div class="w-0.5 h-full bg-slate-100 -my-2"></div>
+                                    </div>
+                                    <div class="pb-8">
+                                        <h4 class="text-lg font-bold text-brand-blue mb-2" data-i18n="serv-2-phase-3">العقود والشراكات</h4>
+                                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="serv-2-phase-3-desc">
+                                            توقيع عقود طويلة الأجل مع المصانع والشركات الكبرى لضمان الاستدامة.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Phase 4 -->
+                                <div class="flex gap-4 group/item">
+                                    <div class="flex flex-col items-center">
+                                        <div class="w-10 h-10 bg-white border-2 border-brand-blue text-brand-blue rounded-full flex items-center justify-center font-bold shrink-0 z-10 group-hover/item:bg-brand-blue group-hover/item:text-white transition-colors">4</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-brand-blue mb-2" data-i18n="serv-2-phase-4">توفير الكوادر</h4>
+                                        <p class="text-slate-500 text-sm leading-relaxed" data-i18n="serv-2-phase-4-desc">
+                                            استقطاب كوادر محترفة وتدريبهم لضمان أعلى مستوى من الأداء التشغيلي.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-10 pt-8 border-t border-slate-100 flex flex-wrap gap-6 items-center justify-between">
+                                <a href="#contact" class="btn-outline-blue btn-magnetic px-8 py-4 rounded-xl font-bold text-sm">تواصل معنا الآن</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-8 md:p-12">
-                        <h3 class="text-2xl md:text-3xl font-black text-brand-blue mb-4 md:mb-6" data-i18n="serv-2-title">خدمات النقل بين المدن</h3>
-                        <ul class="space-y-4 md:space-y-5 mb-8 md:mb-10">
-                            <li class="flex items-start gap-3 md:gap-4 group/item">
-                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue shrink-0 mt-1 transition-transform group-hover/item:scale-125">
-                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        <div class="relative overflow-hidden min-h-[300px] lg:min-h-full order-1 lg:order-2">
+                            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80" alt="Intercity Transport" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-brand-blue/20 mix-blend-multiply"></div>
+                            <div class="absolute top-6 right-6 md:top-10 md:right-10 z-10">
+                                <div class="w-14 h-14 md:w-20 md:h-20 bg-brand-blue text-white rounded-2xl flex items-center justify-center shadow-2xl icon-float">
+                                    <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" stroke-width="2"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1-1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1m-6 0a1 1 0 001-1" stroke-width="2"/></svg>
                                 </div>
-                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-blue" data-i18n="serv-2-item-1">شرح تفصيلي لآلية التشغيل</span>
-                            </li>
-                            <li class="flex items-start gap-3 md:gap-4 group/item">
-                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue shrink-0 mt-1 transition-transform group-hover/item:scale-125">
-                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                </div>
-                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-blue" data-i18n="serv-2-item-2">توقيع عقود مع مصانع وشركات كبرى</span>
-                            </li>
-                            <li class="flex items-start gap-3 md:gap-4 group/item">
-                                <div class="w-5 h-5 md:w-6 md:h-6 bg-brand-blue/10 rounded-full flex items-center justify-center text-brand-blue shrink-0 mt-1 transition-transform group-hover/item:scale-125">
-                                    <svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
-                                </div>
-                                <span class="text-slate-600 font-bold text-base md:text-lg transition-colors group-hover/item:text-brand-blue" data-i18n="serv-2-item-3">إنهاء جميع التراخيص الحكومية</span>
-                            </li>
-                        </ul>
-                        <div class="pt-6 md:pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
-                            <span class="text-[10px] md:text-sm font-black text-slate-400 uppercase tracking-widest" data-i18n="serv-duration">مدة التنفيذ: 90 - 120 يوم</span>
-                            <a href="#contact" class="text-brand-orange font-black flex items-center gap-3 group-hover:gap-5 transition-all text-sm md:text-base" data-i18n="serv-cta">طلب الخدمة ←</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -541,14 +617,29 @@
                 "serv-badge": "خدماتنا | Our Services",
                 "serv-title": "حلول لوجستية <span class='text-brand-orange'>ذكية</span>",
                 "serv-subtitle": "نحن نرافقكم من الفكرة الأولى حتى التشغيل الكامل للمشروع، مع ضمان الالتزام بكافة المعايير السعودية.",
-                "serv-1-title": "خدمات تطبيقات توصيل الطعام",
-                "serv-1-item-1": "إعداد دراسة جدوى متكاملة",
-                "serv-1-item-2": "استخراج التراخيص والسجل التجاري",
-                "serv-1-item-3": "توقيع عقود مع جميع تطبيقات السوق",
-                "serv-2-title": "خدمات النقل بين المدن",
-                "serv-2-item-1": "شرح تفصيلي لآلية التشغيل",
-                "serv-2-item-2": "توقيع عقود مع مصانع وشركات كبرى",
-                "serv-2-item-3": "إنهاء جميع التراخيص الحكومية",
+                "serv-1-title": "خدمات تطبيق توصيل الطعام",
+                "serv-1-desc": "نقدم حلولًا متكاملة لتأسيس وتشغيل تطبيقات توصيل الطعام وفق خطوات مدروسة لضمان نجاح المشروع واستدامته.",
+                "serv-1-step-1": "دراسة الجدوى",
+                "serv-1-step-1-desc": "إعداد دراسة جدوى شاملة لتقييم الفرص وتحليل السوق والتكاليف.",
+                "serv-1-step-2": "الترخيص والتسجيل",
+                "serv-1-step-2-desc": "إجراءات الترخيص والتسجيل التجاري وفق الأنظمة واللوائح المعتمدة.",
+                "serv-1-step-3": "إدارة العقود",
+                "serv-1-step-3-desc": "إبرام العقود مع التطبيقات والشركاء لضمان انطلاقة قوية.",
+                "serv-1-step-4": "التنفيذ (90-120 يوم)",
+                "serv-1-step-4-desc": "تنفيذ المشروع وفق جدول زمني محدد ومتابعة دقيقة.",
+                "serv-1-step-5": "توفير الكوادر",
+                "serv-1-step-5-desc": "توفير سائقين مؤهلين وتدريبهم على أعلى معايير الجودة.",
+                "serv-1-step-6": "إدارة الأسطول",
+                "serv-1-step-6-desc": "تشغيل الأسطول ومراقبة الأداء لضمان كفاءة العمليات.",
+                "serv-2-title": "خطة تنفيذ خدمات النقل بين المدن",
+                "serv-2-phase-1": "إعداد آلية التشغيل",
+                "serv-2-phase-1-desc": "تصور شامل لنموذج العمل، الإجراءات القياسية، هيكلة العمليات، ونظام إدارة الأسطول.",
+                "serv-2-phase-2": "التراخيص والمتطلبات",
+                "serv-2-phase-2-desc": "استخراج التراخيص الحكومية وتصاريح النقل وضمان الامتثال للأنظمة.",
+                "serv-2-phase-3": "العقود والشراكات",
+                "serv-2-phase-3-desc": "توقيع عقود طويلة الأجل مع المصانع والشركات الكبرى لضمان الاستدامة.",
+                "serv-2-phase-4": "توفير الكوادر",
+                "serv-2-phase-4-desc": "استقطاب كوادر محترفة وتدريبهم لضمان أعلى مستوى من الأداء التشغيلي.",
                 "serv-duration": "مدة التنفيذ: 90 - 120 يوم",
                 "serv-cta": "طلب الخدمة ←",
                 "why-badge": "لماذا نحن؟ | Why Idres Salah",
@@ -603,13 +694,28 @@
                 "serv-title": "Smart <span class='text-brand-orange'>Logistics</span> Solutions",
                 "serv-subtitle": "We accompany you from the first idea to the full operation of the project, ensuring compliance with all Saudi standards.",
                 "serv-1-title": "Food Delivery App Services",
-                "serv-1-item-1": "Comprehensive feasibility study",
-                "serv-1-item-2": "Licensing and commercial registration",
-                "serv-1-item-3": "Contracts with all market applications",
-                "serv-2-title": "Intercity Transport Services",
-                "serv-2-item-1": "Detailed operational mechanism",
-                "serv-2-item-2": "Contracts with factories and major firms",
-                "serv-2-item-3": "Government licensing completion",
+                "serv-1-desc": "We provide integrated solutions for establishing and operating food delivery apps according to studied steps to ensure project success and sustainability.",
+                "serv-1-step-1": "Feasibility Study",
+                "serv-1-step-1-desc": "Preparing a comprehensive feasibility study to evaluate opportunities and analyze the market and costs.",
+                "serv-1-step-2": "Licensing & Registration",
+                "serv-1-step-2-desc": "Licensing and commercial registration procedures according to approved regulations.",
+                "serv-1-step-3": "Contract Management",
+                "serv-1-step-3-desc": "Concluding contracts with applications and partners to ensure a strong launch.",
+                "serv-1-step-4": "Execution (90-120 Days)",
+                "serv-1-step-4-desc": "Project execution according to a specific schedule and close monitoring.",
+                "serv-1-step-5": "Staffing",
+                "serv-1-step-5-desc": "Providing qualified drivers and training them to the highest quality standards.",
+                "serv-1-step-6": "Fleet Management",
+                "serv-1-step-6-desc": "Fleet operation and performance monitoring to ensure operational efficiency.",
+                "serv-2-title": "Intercity Transport Execution Plan",
+                "serv-2-phase-1": "Operational Mechanism",
+                "serv-2-phase-1-desc": "Comprehensive concept of the business model, SOPs, operations structure, and fleet management system.",
+                "serv-2-phase-2": "Licenses & Requirements",
+                "serv-2-phase-2-desc": "Extracting government licenses and transport permits and ensuring compliance with regulations.",
+                "serv-2-phase-3": "Contracts & Partnerships",
+                "serv-2-phase-3-desc": "Signing long-term contracts with factories and major companies to ensure sustainability.",
+                "serv-2-phase-4": "Staffing",
+                "serv-2-phase-4-desc": "Attracting professional staff and training them to ensure the highest level of operational performance.",
                 "serv-duration": "Execution: 90 - 120 Days",
                 "serv-cta": "Request Service ←",
                 "why-badge": "Why Idres Salah?",
